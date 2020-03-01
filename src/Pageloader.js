@@ -1,7 +1,7 @@
 import React from 'react';
-/* import SearchResults from './SearchResults.js';
+import Search from './Search.js';
 import MoviesCategory from './MoviesCategory.js';
-import Home from './Home.js'; */
+import Home from './Home.js'; 
 class Pageloader extends React.Component {
     constructor (props){
         super()
@@ -21,7 +21,7 @@ class Pageloader extends React.Component {
     } else if (currentPage==="home"){
         page=<Home pages= {this.state.pages} />
     }
-    else { page=<MovieCategory currentPage={this.state.currentPage}/>
+    else { page=<MoviesCategory currentPage={this.state.currentPage}/>
 
     }
     return page

@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar.js';
-/* import Pageloader from './Pageloader.js';
-import Searchbar from './Searchbar.js'; */
+import Pageloader from './Pageloader.js';
+/* import Searchbar from './Searchbar.js';  */
 import './App.css';
 //api key  6a80ce43901871f9a88ecce5f10ac287
 class App extends React.Component {
@@ -32,9 +32,9 @@ logo:'',
 link:'./now_playing',
 logo:'',
 },
-{id:'',
-  name:'',
-link:'',
+{id:'searchbar',
+  name:'searchbar',
+link:'./Searchbar',
 logo:'',
 },
 ]
@@ -43,9 +43,17 @@ let currentPage= pages.find((page)=>page.id===currentPath) */
 let currentPage=pages[0]
 this.state={pages:pages,currentPage:currentPage}
   }
+  
+  handleCategoryClick(id) {
+        
+  }
   render(){
     return(
-<Navbar pages={this.state.pages} currentPage={this.state.currentPage} />
+      <div>
+        <Navbar pages={this.state.pages} currentPage={this.state.currentPage} />
+        <Pageloader pages={this.state.pages} currentPage={this.state.currentPage}/>
+      </div>
+
     )
   }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import '/movie.css';
 
 class Movie extends React.Component{
     constructor (props){
@@ -7,14 +8,9 @@ class Movie extends React.Component{
 
 render(){
     return(
-        <div className="single_movie">
-        <img alt="pelicula"
-        
-        src="./public/no-image.png"
-        />
-        <p>titulo-pelicula</p>
-      </div>
-
+    <div className="single-movie">{this.props.movieId}
+   
+    </div>
     )
 }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import Movie from 'Movie';
 
 class SearchResults extends React.Component{
     constructor (props){

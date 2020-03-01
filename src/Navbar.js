@@ -14,7 +14,7 @@ class Navbar extends React.Component {
         for (let i=0;i<pages.length;i++){
             let page=pages[i]
 
-            if (page.id!=='search'){
+            if (page.id!=='searchbar'){
                 list.push(
                     <li id={page.id}><a href={page.link}> {page.name}</a> </li>
                 )
