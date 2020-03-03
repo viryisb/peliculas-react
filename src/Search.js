@@ -8,7 +8,7 @@ class Search extends React.Component{
         render (){
 
             return(
-            <div>under construction</div>
+            <div><img alt="po" src="\public\assets\no-image.png"></img> </div>
             )}
 }
 

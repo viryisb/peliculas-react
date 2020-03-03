@@ -14,14 +14,14 @@ class Pageloader extends React.Component {
 
     pageSelector(){
     let page
-    let currentPage=this.state.currentPage.id
+    let currentPage=this.props.currentPage.id
     if (currentPage==="search"){
         page=<Search/>
 
     } else if (currentPage==="home"){
-        page=<Home pages= {this.state.pages} />
+        page=<Home pages= {this.props.pages} />
     }
-    else { page=<MoviesCategory currentPage={this.state.currentPage}/>
+    else { page=<MoviesCategory currentPage={this.props.currentPage}/>
 
     }
     return page

@@ -45,12 +45,14 @@ this.state={pages:pages,currentPage:currentPage}
   }
   
   handleCategoryClick(id) {
-        
+    let currentPage= this.state.pages.find(page => page.id===id)
+    this.setState((state,props)=>{return {currentPage:currentPage} })
   }
+  
   render(){
     return(
       <div>
-        <Navbar pages={this.state.pages} currentPage={this.state.currentPage} />
+        <Navbar pages={this.state.pages} currentPage={this.state.currentPage} handlers={this.handleCategoryClick.bind(this)} />
         <Pageloader pages={this.state.pages} currentPage={this.state.currentPage}/>
       </div>
 

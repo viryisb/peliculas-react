@@ -1,5 +1,5 @@
 import React from 'react';
-import '/movie.css';
+import './movie.css';
 
 class Movie extends React.Component{
     constructor (props){
@@ -8,7 +8,7 @@ class Movie extends React.Component{
 
 render(){
     return(
-    <div className="single-movie">{this.props.movieId}
+    <div className="single-movie">{this.props.title}
    
     </div>
     )

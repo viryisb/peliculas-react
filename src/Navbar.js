@@ -16,7 +16,7 @@ class Navbar extends React.Component {
 
             if (page.id!=='searchbar'){
                 list.push(
-                    <li id={page.id}><a href={page.link}> {page.name}</a> </li>
+                    <li id={page.id} key={page.id}><button onClick={()=>{this.props.handlers(page.id)}} href={page.link}> {page.name}</button> </li>
                 )
             }
         }
