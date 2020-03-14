@@ -8,7 +8,7 @@ class Home extends React.Component{
         render (){
 
             return(
-            <div>under construction</div>
+            <div>under construction (este texto está en home)</div>
             )}
 }
 

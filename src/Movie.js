@@ -9,8 +9,10 @@ class Movie extends React.Component{
 render(){
     return(
     <div className="single-movie">{this.props.title}
-   
-    </div>
+    <img src= "./assets/no-image.png" alt="movie"></img>
+        <p>titulo de la pelicula</p>
+      </div>
+
     )
 }
 }
