@@ -10,7 +10,7 @@ class App extends React.Component {
     let pages=[{id:'home',
       name:'home',
     link:'/home',
-  logo:'assets/logo-ada.svg',
+  logo:'./assets/logo-ada.svg',
 },
 {id:'top_rated',
   name:'Top rated',
