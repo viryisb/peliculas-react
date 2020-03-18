@@ -27,7 +27,7 @@ class MoviesCategory extends React.Component{
       renderMovie(){
       let movies=[]
       this.state.movies.forEach((movie)=>{
-        movies.push(<Movie title={movie.title}/>)
+        movies.push(<Movie movie={movie}/>)
       })
 
      return movies
