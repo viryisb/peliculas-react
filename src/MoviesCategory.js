@@ -8,7 +8,8 @@ class MoviesCategory extends React.Component{
         super()
         this.state = {
           currentPage:props.currentPage,
-          movies: []
+          movies: [],
+          page:0
           }
         }
 
@@ -23,6 +24,12 @@ class MoviesCategory extends React.Component{
           const response = await axios.get(`https://api.themoviedb.org/3/movie/${this.props.currentPage.id}?api_key=${settings.apikey}`);
           console.log(response);
           this.setState ((state,props)=>{return {movies:response.data.results}}) 
+        }
+        handleLoad(){
+          //page ++
+          //getnew page
+          this.setState ((state,props)=>{return {movies:state.movies.concat(response.data.results)}})
+          //this.forceUpdate()
         }
       renderMovie(){
       let movies=[]
@@ -40,6 +47,7 @@ class MoviesCategory extends React.Component{
       <div className="movies">
         {this.renderMovie()}
       </div>
+      <button onclick>Load more</button>
     </div>
     )
   }
